@@ -1,2 +1,0 @@
-# Pokegame
-Created with CodeSandbox
