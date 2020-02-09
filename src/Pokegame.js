@@ -14,6 +14,7 @@ class Pokegame extends Component {
       { id: 133, name: "Eevee", type: "normal", base_experience: 65 }
     ]
   };
+
   render() {
     let handOne = [];
     let handTwo = [...this.props.pokemon];
@@ -23,11 +24,15 @@ class Pokegame extends Component {
       handOne.push(randPokemons);
     }
 
+    let expOne = handOne.reduce((a, b) => a + b.base_experience, 0);
+    let expTwo = handTwo.reduce((a, b) => a + b.base_experience, 0);
+
     return (
       <div>
         <h2>Team A:</h2>
-        <Pokedex pokemon={handOne} />;<h2>Team B:</h2>
-        <Pokedex pokemon={handTwo} />;
+        <Pokedex pokemon={handOne} exp={expOne} />
+        <h2>Team B:</h2>
+        <Pokedex pokemon={handTwo} exp={expTwo} />
       </div>
     );
   }
