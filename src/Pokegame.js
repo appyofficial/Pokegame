@@ -22,9 +22,11 @@ class Pokegame extends Component {
       let randPokemons = handTwo.splice(randIdx, 1)[0];
       handOne.push(randPokemons);
     }
+
     return (
       <div>
-        <Pokedex pokemon={handOne} />;
+        <h2>Team A:</h2>
+        <Pokedex pokemon={handOne} />;<h2>Team B:</h2>
         <Pokedex pokemon={handTwo} />;
       </div>
     );
