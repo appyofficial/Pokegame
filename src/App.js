@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import Pokedex from "./Pokedex";
+import Pokegame from "./Pokegame";
 export default function App() {
-  return <Pokedex />;
+  return <Pokegame />;
 }
